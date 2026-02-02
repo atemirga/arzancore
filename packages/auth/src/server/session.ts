@@ -1,5 +1,5 @@
 import { SignJWT, jwtVerify } from 'jose';
-import { generateToken, hashSHA256 } from '@arzan/utils';
+import { generateToken, hashSHA256 } from '@arzancloud/utils';
 
 export interface SessionPayload {
   userId: string;

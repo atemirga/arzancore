@@ -1,11 +1,11 @@
 {
-  "name": "@arzan/modules",
+  "name": "@arzancloud/modules",
   "version": "0.1.0",
   "private": false,
   "description": "Arzan Platform - Module System",
   "repository": {
     "type": "git",
-    "url": "https://github.com/atemirga/arzancore.git"
+    "url": "https://github.com/arzancloud/arzancore.git"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
@@ -27,7 +27,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@arzan/utils": "workspace:*"
+    "@arzancloud/utils": "workspace:*"
   },
   "devDependencies": {
     "@types/node": "^20.11.0",

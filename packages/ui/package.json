@@ -1,11 +1,11 @@
 {
-  "name": "@arzan/ui",
+  "name": "@arzancloud/ui",
   "version": "0.1.0",
   "private": false,
   "description": "Arzan Platform - UI Component Library",
   "repository": {
     "type": "git",
-    "url": "https://github.com/atemirga/arzancore.git"
+    "url": "https://github.com/arzancloud/arzancore.git"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"

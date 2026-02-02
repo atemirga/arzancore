@@ -1,5 +1,5 @@
 /**
- * @arzan/i18n - Internationalization package for Arzan ecosystem
+ * @arzancloud/i18n - Internationalization package for Arzan ecosystem
  */
 
 export {

@@ -1,11 +1,11 @@
 {
-  "name": "@arzan/database",
+  "name": "@arzancloud/database",
   "version": "0.1.0",
   "private": false,
   "description": "Arzan Platform - Database Schema & Utilities",
   "repository": {
     "type": "git",
-    "url": "https://github.com/atemirga/arzancore.git"
+    "url": "https://github.com/arzancloud/arzancore.git"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"

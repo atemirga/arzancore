@@ -1,11 +1,11 @@
 {
-  "name": "@arzan/utils",
+  "name": "@arzancloud/utils",
   "version": "0.1.0",
   "private": false,
   "description": "Arzan Platform - Shared Utilities",
   "repository": {
     "type": "git",
-    "url": "https://github.com/atemirga/arzancore.git"
+    "url": "https://github.com/arzancloud/arzancore.git"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"

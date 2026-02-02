@@ -1,11 +1,11 @@
 {
-  "name": "@arzan/auth",
+  "name": "@arzancloud/auth",
   "version": "0.1.0",
   "private": false,
   "description": "Arzan Platform - Authentication & Authorization",
   "repository": {
     "type": "git",
-    "url": "https://github.com/atemirga/arzancore.git"
+    "url": "https://github.com/arzancloud/arzancore.git"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
@@ -37,8 +37,8 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@arzan/database": "workspace:*",
-    "@arzan/utils": "workspace:*",
+    "@arzancloud/database": "workspace:*",
+    "@arzancloud/utils": "workspace:*",
     "jose": "^5.2.0"
   },
   "devDependencies": {

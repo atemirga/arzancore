@@ -1,11 +1,11 @@
 {
-  "name": "@arzan/i18n",
+  "name": "@arzancloud/i18n",
   "version": "0.1.0",
   "private": false,
   "description": "Arzan Platform - Internationalization",
   "repository": {
     "type": "git",
-    "url": "https://github.com/atemirga/arzancore.git"
+    "url": "https://github.com/arzancloud/arzancore.git"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"

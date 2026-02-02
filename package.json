@@ -16,7 +16,7 @@
     "clean": "turbo clean && rm -rf node_modules",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "typecheck": "turbo typecheck",
-    "dev:portal": "turbo dev --filter=@arzan/portal",
+    "dev:portal": "turbo dev --filter=@arzancloud/portal",
     "build:packages": "turbo build --filter='./packages/*'"
   },
   "devDependencies": {
