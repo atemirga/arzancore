@@ -1,7 +1,7 @@
-import { scrypt, randomBytes, timingSafeEqual } from 'crypto';
+import { scrypt, randomBytes, timingSafeEqual, ScryptOptions } from 'crypto';
 import { promisify } from 'util';
 
-const scryptAsync = promisify(scrypt);
+const scryptAsync = promisify<string | Buffer, string | Buffer, number, ScryptOptions, Buffer>(scrypt);
 
 const SALT_LENGTH = 16;
 const KEY_LENGTH = 64;
