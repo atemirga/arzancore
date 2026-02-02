@@ -1,8 +1,15 @@
 {
   "name": "@arzan/database",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "description": "Arzan Platform - Database Schema & Utilities",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/atemirga/arzancore.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
