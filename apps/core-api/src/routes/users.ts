@@ -6,7 +6,11 @@ import { authMiddleware } from '../middleware/auth.js';
 import { hashPassword, verifyPassword, validatePassword } from '../services/password.js';
 import type { SessionUser } from '../types/index.js';
 
-const app = new Hono();
+type Variables = {
+  user: SessionUser;
+};
+
+const app = new Hono<{ Variables: Variables }>();
 app.use('/*', authMiddleware);
 
 const updateProfileSchema = z.object({
@@ -18,7 +22,7 @@ const updateProfileSchema = z.object({
 
 // GET /users/profile
 app.get('/profile', async (c) => {
-  const sessionUser = c.get('user') as SessionUser;
+  const sessionUser = c.get('user');
 
   const user = await db.query.users.findFirst({
     where: eq(users.id, sessionUser.id),
@@ -41,7 +45,7 @@ app.get('/profile', async (c) => {
 
 // PATCH /users/profile
 app.patch('/profile', async (c) => {
-  const sessionUser = c.get('user') as SessionUser;
+  const sessionUser = c.get('user');
   const body = await c.req.json();
   const validation = updateProfileSchema.safeParse(body);
 
@@ -59,7 +63,7 @@ app.patch('/profile', async (c) => {
 
 // POST /users/change-password
 app.post('/change-password', async (c) => {
-  const sessionUser = c.get('user') as SessionUser;
+  const sessionUser = c.get('user');
   const { currentPassword, newPassword } = await c.req.json();
 
   const user = await db.query.users.findFirst({

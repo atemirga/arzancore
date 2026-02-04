@@ -8,7 +8,11 @@ import { generateTokens, verifyRefreshToken } from '../services/jwt.js';
 import { authMiddleware } from '../middleware/auth.js';
 import type { SessionUser } from '../types/index.js';
 
-const app = new Hono();
+type Variables = {
+  user: SessionUser;
+};
+
+const app = new Hono<{ Variables: Variables }>();
 
 const registerSchema = z.object({
   email: z.string().email(),
@@ -149,7 +153,7 @@ app.post('/refresh', async (c) => {
 
 // GET /auth/me
 app.get('/me', authMiddleware, async (c) => {
-  const user = c.get('user') as SessionUser;
+  const user = c.get('user');
   return c.json({ user });
 });
 

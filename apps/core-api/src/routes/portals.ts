@@ -13,7 +13,11 @@ import {
 import { authMiddleware } from '../middleware/auth.js';
 import type { SessionUser } from '../types/index.js';
 
-const app = new Hono();
+type Variables = {
+  user: SessionUser;
+};
+
+const app = new Hono<{ Variables: Variables }>();
 app.use('/*', authMiddleware);
 
 const createPortalSchema = z.object({
@@ -24,7 +28,7 @@ const createPortalSchema = z.object({
 
 // GET /portals - Список порталов пользователя
 app.get('/', async (c) => {
-  const user = c.get('user') as SessionUser;
+  const user = c.get('user');
 
   const memberships = await db.query.portalMembers.findMany({
     where: and(
@@ -55,7 +59,7 @@ app.get('/', async (c) => {
 
 // POST /portals - Создать портал
 app.post('/', async (c) => {
-  const user = c.get('user') as SessionUser;
+  const user = c.get('user');
   const body = await c.req.json();
   const validation = createPortalSchema.safeParse(body);
 
@@ -94,7 +98,7 @@ app.post('/', async (c) => {
 
 // GET /portals/:id - Детали портала
 app.get('/:id', async (c) => {
-  const user = c.get('user') as SessionUser;
+  const user = c.get('user');
   const portalId = c.req.param('id');
 
   const membership = await db.query.portalMembers.findFirst({
@@ -118,7 +122,7 @@ app.get('/:id', async (c) => {
 
 // GET /portals/:id/members - Участники портала
 app.get('/:id/members', async (c) => {
-  const user = c.get('user') as SessionUser;
+  const user = c.get('user');
   const portalId = c.req.param('id');
 
   const membership = await db.query.portalMembers.findFirst({
@@ -157,7 +161,7 @@ app.get('/:id/members', async (c) => {
 
 // POST /portals/:id/invite - Пригласить участника
 app.post('/:id/invite', async (c) => {
-  const user = c.get('user') as SessionUser;
+  const user = c.get('user');
   const portalId = c.req.param('id');
   const { email, role = 'member' } = await c.req.json();
 
