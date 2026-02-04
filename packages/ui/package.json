@@ -5,7 +5,14 @@
   "description": "Arzan Platform - UI Component Library",
   "license": "MIT",
   "author": "Arzan Cloud <dev@arzan.cloud>",
-  "keywords": ["arzan", "ui", "components", "react", "tailwindcss", "radix"],
+  "keywords": [
+    "arzan",
+    "ui",
+    "components",
+    "react",
+    "tailwindcss",
+    "radix"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/arzancloud/arzancore.git",
@@ -19,8 +26,13 @@
     "registry": "https://npm.pkg.github.com",
     "access": "restricted"
   },
-  "sideEffects": ["**/*.css"],
-  "files": ["dist", "README.md"],
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
@@ -61,6 +73,7 @@
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "lucide-react": "^0.312.0",
+    "react-day-picker": "^9.13.0",
     "tailwind-merge": "^2.2.0"
   },
   "devDependencies": {

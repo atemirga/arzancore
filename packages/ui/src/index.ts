@@ -5,6 +5,20 @@ export { cn } from './lib/utils';
 export { Button, buttonVariants, type ButtonProps } from './components/button';
 export { Input, type InputProps } from './components/input';
 export { Label } from './components/label';
+export { Textarea } from './components/textarea';
+export { Badge, badgeVariants } from './components/badge';
+export { Checkbox } from './components/checkbox';
+export { Switch } from './components/switch';
+export {
+  Select,
+  SelectGroup,
+  SelectValue,
+  SelectTrigger,
+  SelectContent,
+  SelectItem,
+  SelectLabel,
+  SelectSeparator,
+} from './components/select';
 export {
   Card,
   CardHeader,
@@ -25,6 +39,13 @@ export {
   DialogTitle,
   DialogDescription,
 } from './components/dialog';
+export { Separator } from './components/separator';
+export { Tabs, TabsList, TabsTrigger, TabsContent } from './components/tabs';
+export { Avatar, AvatarImage, AvatarFallback } from './components/avatar';
+export { Calendar } from './components/calendar';
+export { Popover, PopoverTrigger, PopoverContent } from './components/popover';
+export { Skeleton } from './components/skeleton';
+export { ScrollArea, ScrollBar } from './components/scroll-area';
 
 // Company Structure Components
 export {
